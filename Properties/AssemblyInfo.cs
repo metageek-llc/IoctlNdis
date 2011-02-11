@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("IoctlNdis")]
+[assembly: AssemblyTitle("MetaGeek.IoctlNdis")]
 [assembly: AssemblyDescription("Ndis query API")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("MetaGeek, LLC")]
-[assembly: AssemblyProduct("IoctlNdis")]
+[assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("Copyright © MetaGeek, LLC 2008-2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
