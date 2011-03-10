@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{27BBAED2-FCF5-4A9E-BCFA-DE6D50F4CDBC}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -66,7 +66,14 @@
   <ItemGroup>
     <Compile Include="AdapterInformation.cs" />
     <Compile Include="IoctlNdis.cs" />
+    <Compile Include="IoctlNdisClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ManagedWifi\ManagedWifi.csproj">
+      <Project>{B290695E-0DD1-4912-88DE-7AA6DC7AF0A5}</Project>
+      <Name>ManagedWifi</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
