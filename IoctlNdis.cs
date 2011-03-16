@@ -1,5 +1,3 @@
-////////////////////////////////////////////////////////////////
-
 #region Header
 
 //
@@ -20,8 +18,6 @@
 
 #endregion Header
 
-
-////////////////////////////////////////////////////////////////
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -262,6 +258,20 @@ namespace MetaGeek.IoctlNdis
         private const byte WlanEidVendorSpecific = 221;
 
         #endregion Fields
+
+        #region Properties
+
+        public Guid InterfaceGuid
+        {
+            get; set;
+        }
+
+        public String InterfaceDecription
+        {
+            get; set;
+        }
+
+        #endregion Properties
 
         #region Public Methods
 
