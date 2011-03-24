@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("MetaGeek, LLC")]
 [assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("Copyright © MetaGeek, LLC 2008-2010")]
+[assembly: AssemblyCopyright("Copyright © MetaGeek, LLC 2008-2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -31,5 +31,5 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Revision and Build Numbers
 // by using the '*' as shown below:
-[assembly: AssemblyFileVersion("1.0.11.1015")]
-[assembly: AssemblyVersion("1.0.11.1015")]
+[assembly: AssemblyFileVersion("1.0.12.0324")]
+[assembly: AssemblyVersion("1.0.12.0324")]
