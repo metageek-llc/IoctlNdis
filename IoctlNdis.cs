@@ -346,12 +346,12 @@ namespace MetaGeek.IoctlNdis
                             }
                         }
 
-                        Debug.WriteLine("WLAN_EID_RSN : length = " + elementLength);
+                        //Debug.WriteLine("WLAN_EID_RSN : length = " + elementLength);
                         break;
                     }
 
                     if (WlanEidVendorSpecific == elementId) {
-                        Debug.WriteLine("WLAN_EID_VENDOR_SPECIFIC");
+                        //Debug.WriteLine("WLAN_EID_VENDOR_SPECIFIC");
                         // BEGIN FM
                         // Parse the Microsoft OUI
                         if (elementLength  >= 3 &&
@@ -413,7 +413,8 @@ namespace MetaGeek.IoctlNdis
                         memSize,
                         ref bytesReturned
                     );
-                    if (success) {
+                    if (success && bytesReturned > 4)
+                    {
                         //
                         // Convert the buffer to an array of BSSID
                         // items.
