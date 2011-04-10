@@ -626,7 +626,7 @@ namespace MetaGeek.IoctlNdis
 
                 // Patch from cborn:
                 // We can receive either NDIS_WLAN_BSSID (104 bytes) or NDIS_WLAN_BSSID_EX (>=120 bytes) here
-                // More of my devices send the obsolete 104 byte one than the new one
+                // More of its devices send the obsolete 104 byte one than the new one
                 // We should handle it properly, but for now I'll just set the IELength field to 0,
                 // and clear out the additional 8 supported rate fields
                 // DAV 20AUG08
