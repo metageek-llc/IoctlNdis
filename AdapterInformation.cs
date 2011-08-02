@@ -20,7 +20,6 @@
 
 #endregion Header
 
-
 ////////////////////////////////////////////////////////////////
 using System.Text;
 
@@ -34,9 +33,9 @@ namespace MetaGeek.IoctlNdis
     {
         #region Fields
 
-        private string _description;
-        private string _serviceName;
-        private string _title;
+        private string _itsDescription;
+        private string _itsServiceName;
+        private string _itsTitle;
 
         #endregion Fields
 
@@ -63,9 +62,9 @@ namespace MetaGeek.IoctlNdis
         /// <summary>
         /// Gets or sets the service name for the network adapter.
         /// </summary>
-        public string ServiceName
+        public string ItsServiceName
         {
-            get { return _serviceName; }
+            get { return _itsServiceName; }
         }
 
         #endregion Properties
@@ -87,9 +86,9 @@ namespace MetaGeek.IoctlNdis
         /// <param name="serviceName">service name of the network adapter</param>
         public AdapterInformation(string description, string title, string serviceName)
         {
-            _description = description;
-            _title = title;
-            _serviceName = serviceName;
+            _itsDescription = description;
+            _itsTitle = title;
+            _itsServiceName = serviceName;
         }
 
         #endregion Constructors
@@ -103,9 +102,9 @@ namespace MetaGeek.IoctlNdis
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("Description: " + _description + "\n");
-            sb.Append("Service Name: " + _serviceName + "\n");
-            sb.Append("Title: " + _title + "\n");
+            sb.Append("Description: " + _itsDescription + "\n");
+            sb.Append("Service Name: " + _itsServiceName + "\n");
+            sb.Append("Title: " + _itsTitle + "\n");
             return ( sb.ToString());
         }
 

@@ -261,12 +261,12 @@ namespace MetaGeek.IoctlNdis
 
         #region Properties
 
-        public Guid InterfaceGuid
+        public String InterfaceDecription
         {
             get; set;
         }
 
-        public String InterfaceDecription
+        public Guid InterfaceGuid
         {
             get; set;
         }
@@ -575,7 +575,6 @@ namespace MetaGeek.IoctlNdis
             return result;
         }
         */
-
         [DllImport("Kernel32.dll", CharSet=CharSet.Auto, SetLastError=true)]
         private static extern bool CloseHandle(
             [In] IntPtr handle);
@@ -725,7 +724,7 @@ namespace MetaGeek.IoctlNdis
         /// <returns></returns>
         public AuthenticationMode QueryAuthenticationMode(AdapterInformation adapter) {
             AuthenticationMode authMode = AuthenticationMode.Ndis80211AuthModeWpaNone;
-            IntPtr deviceHandle = OpenDevice(adapter.ServiceName);
+            IntPtr deviceHandle = OpenDevice(adapter.ItsServiceName);
             try {
                 IntPtr authModePtr = Marshal.AllocHGlobal(sizeof(int));
                 try {
