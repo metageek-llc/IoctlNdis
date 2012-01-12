@@ -281,9 +281,9 @@ namespace MetaGeek.IoctlNdis
         /// </summary>
         /// <param name="bssidItem">bssid from which to read the privacy mode</param>
         /// <returns>a string representing the privacy mode</returns>
-        public string GetPrivacyString(NdisWlanBssidEx bssidItem)
+        public string GetSecurityString(NdisWlanBssidEx bssidItem)
         {
-            string privacyMode = "None";
+            string privacyMode = "Open";
 
             if (bssidItem.Privacy != 0) {
                 privacyMode = "WEP";
@@ -332,12 +332,12 @@ namespace MetaGeek.IoctlNdis
                                     privacyMode = "WEP-104";
                                     break;
 
-                                case 2: // TKIP
-                                    privacyMode = "WPA-TKIP";
+                                case 2: // TKIP -> Personal
+                                    privacyMode = "WPA-Personal";
                                     break;
 
-                                case 4: // CCMP
-                                    privacyMode = "WPA2-CCMP";
+                                case 4: // CCMP -> Enterprise
+                                    privacyMode = "WPA2-Enterprise";
                                     break;
                                 default:
                                     privacyMode = "Unknown";
