@@ -333,7 +333,7 @@ namespace MetaGeek.IoctlNdis
                                     break;
 
                                 case 2: // TKIP -> Personal
-                                    privacyMode = "WPA-Personal";
+                                    privacyMode = "WPA2-Personal";
                                     break;
 
                                 case 4: // CCMP -> Enterprise
@@ -359,7 +359,7 @@ namespace MetaGeek.IoctlNdis
                             bssidItem.IEs[index + 1] == 0x50 &&
                             bssidItem.IEs[index + 2] == 0xF2 &&
                             bssidItem.IEs[index + 3] == 0x01) { // 1 == WPA, 2 == WMM ???
-                            privacyMode = "WPA";
+                            privacyMode = "WPA-Personal";
                         }
                         // END FM
                     }
